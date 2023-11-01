@@ -13,6 +13,9 @@ screen = pygame.display.set_mode((1000, 750))
 background = pygame.image.load('game/images/background-image.jpg')
 full_background = pygame.transform.scale(background, (1000, 750))
 
+# Creating the title
+pygame.display.set_caption("Space Invaders")
+
 running = True
 
 while running:
