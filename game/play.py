@@ -16,6 +16,10 @@ full_background = pygame.transform.scale(background, (1000, 750))
 # Creating the title
 pygame.display.set_caption("Space Invaders")
 
+# Creating the icon
+icon = pygame.image.load('game/images/game-icon.png')
+pygame.display.set_icon(icon)
+
 running = True
 
 while running:
