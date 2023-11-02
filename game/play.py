@@ -50,6 +50,12 @@ while running:
                 player_x_change = 0  # The player will stop moving
                 
     player_x += player_x_change
+    
+    # Adding the boundary of the player
+    if player_x < 0:
+        player_x = 0
+    elif player_x >= 936:
+        player_x = 936
             
     player()
     
