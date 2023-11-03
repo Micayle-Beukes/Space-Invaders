@@ -84,6 +84,14 @@ while running:
             
         enemy_x[i] += enemy_x_change[i]
         
+        # Adding the boundary of the enemy
+        if enemy_x[i] < 0:
+            enemy_x_change[i] = 0.3
+            enemy_y[i] += enemy_y_change[i]
+        elif enemy_x[i] >= 936:
+            enemy_x_change[i] = -0.3
+            enemy_y[i] += enemy_y_change[i] 
+        
         enemy(enemy_x[i], enemy_y[i], i)
             
     player()
