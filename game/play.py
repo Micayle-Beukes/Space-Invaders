@@ -29,6 +29,25 @@ player_y_change = 0  # new co-ordinate
 
 def player():
     screen.blit(player_image, (player_x, player_y))
+    
+    
+# Creating the Enemies
+enemy_image = []
+enemy_x = []
+enemy_y = []
+enemy_x_change = []
+enemy_y_change = []
+num_of_enemies = 12
+
+for i in range(num_of_enemies):
+    enemy_image.append(pygame.image.load('game/images/enemy.png'))
+    enemy_x.append(random.randint(0, 1000))  # random X co-ordinate
+    enemy_y.append(random.randint(40, 200))  # random Y co-ordinate
+    enemy_x_change.append(0.3)
+    enemy_y_change.append(40)
+
+def enemy(x, y, i):
+    screen.blit(enemy_image[i], (x, y))
 
 running = True
 
@@ -56,6 +75,16 @@ while running:
         player_x = 0
     elif player_x >= 936:
         player_x = 936
+        
+    for i in range(num_of_enemies): 
+        if enemy_y[i] > 600:
+            for j in range(num_of_enemies):
+                enemy_y[j] = 2000
+            break
+            
+        enemy_x[i] += enemy_x_change[i]
+        
+        enemy(enemy_x[i], enemy_y[i], i)
             
     player()
     
