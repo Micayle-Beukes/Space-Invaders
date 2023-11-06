@@ -51,7 +51,7 @@ def enemy(x, y, i):
     
     
 # Creating enemy bullet
-bullet_image = pygame.image.load('bullet.png')
+bullet_image = pygame.image.load('game/images/bullet.png')
 bullet_x = 0
 bullet_y = 640  # same position as the player
 bullet_x_change = 0
@@ -77,6 +77,11 @@ while running:
                 player_x_change = -0.7
             if event.key == pygame.K_RIGHT:  # Checks if the left keystroke is pressed
                 player_x_change = 0.7
+                
+            if event.key == pygame.K_SPACE:
+                if bullet_state == "ready":
+                    bullet_x = player_x
+                    fire_bullet(bullet_x, bullet_y)
         
         if event.type == pygame.KEYUP:  # Checks if the keystroke is released
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:  # Checks if the left or right keystroke was pressed
@@ -107,6 +112,16 @@ while running:
             enemy_y[i] += enemy_y_change[i] 
         
         enemy(enemy_x[i], enemy_y[i], i)
+        
+        
+    # Adding the bullet movement
+    if bullet_y <= 0:
+        bullet_y = 630
+        bullet_state = "ready"
+        
+    if bullet_state == "fire":
+        fire_bullet(bullet_x, bullet_y) 
+        bullet_y -= bullet_y_change
             
     player()
     
