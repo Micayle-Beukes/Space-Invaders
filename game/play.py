@@ -48,6 +48,20 @@ for i in range(num_of_enemies):
 
 def enemy(x, y, i):
     screen.blit(enemy_image[i], (x, y))
+    
+    
+# Creating enemy bullet
+bullet_image = pygame.image.load('bullet.png')
+bullet_x = 0
+bullet_y = 640  # same position as the player
+bullet_x_change = 0
+bullet_y_change = 2
+bullet_state = "ready"
+
+def fire_bullet(x, y):
+    global bullet_state
+    bullet_state = "fire"
+    screen.blit(bullet_image, (x + 16, y + 10))
 
 running = True
 
