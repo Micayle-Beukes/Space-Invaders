@@ -58,11 +58,22 @@ bullet_x_change = 0
 bullet_y_change = 2
 bullet_state = "ready"
 
+
 def fire_bullet(x, y):
     global bullet_state
     bullet_state = "fire"
     screen.blit(bullet_image, (x + 16, y + 10))
 
+
+# Collision detection    
+def isCollison(enemy_x, enemy_y, bullet_x, bullet_y):
+    distance = math.sqrt(math.pow(enemy_x - bullet_x, 2) + (math.pow(enemy_y - bullet_y, 2)))  # calculates distance between 2 points
+    if distance < 27:
+        return True
+    else:
+        return False
+    
+    
 running = True
 
 while running:
@@ -110,6 +121,14 @@ while running:
         elif enemy_x[i] >= 936:
             enemy_x_change[i] = -0.3
             enemy_y[i] += enemy_y_change[i] 
+            
+        # Collision     
+        collision = isCollison(enemy_x[i], enemy_y[i], bullet_x, bullet_y)
+        if collision:
+            bullet_y = 630
+            bullet_state = "ready"
+            enemy_x[i] = random.randint(0, 936) 
+            enemy_y[i] = random.randint(40, 200)
         
         enemy(enemy_x[i], enemy_y[i], i)
         
