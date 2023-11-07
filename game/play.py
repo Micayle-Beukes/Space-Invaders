@@ -74,6 +74,17 @@ def isCollison(enemy_x, enemy_y, bullet_x, bullet_y):
         return False
     
     
+# Displaying score on screen 
+score_value = 0
+font = pygame.font.Font('game/images/score-font.ttf', 40)
+text_x = 10
+text_y = 10
+
+def show_score(x, y):
+    score = font.render("Score: " + str(score_value), True, (255, 255, 255))
+    screen.blit(score, (x, y))
+    
+    
 running = True
 
 while running:
@@ -143,5 +154,7 @@ while running:
         bullet_y -= bullet_y_change
             
     player()
+    
+    show_score(text_x, text_y)
     
     pygame.display.update()
