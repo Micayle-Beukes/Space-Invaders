@@ -85,6 +85,14 @@ def show_score(x, y):
     screen.blit(score, (x, y))
     
     
+# Displaying "GAME OVER" on the screen
+game_over_font = pygame.font.Font('game/images/game-over-font.ttf', 120)
+
+def game_over_text():
+    game_over = game_over_font.render('GAME OVER', True, (255, 255, 255))
+    screen.blit(game_over, (160, 300))
+    
+    
 running = True
 
 while running:
@@ -121,6 +129,7 @@ while running:
         if enemy_y[i] > 600:
             for j in range(num_of_enemies):
                 enemy_y[j] = 2000
+            game_over_text()
             break
             
         enemy_x[i] += enemy_x_change[i]
