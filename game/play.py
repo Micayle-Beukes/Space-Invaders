@@ -147,6 +147,7 @@ while running:
         if collision:
             bullet_y = 630
             bullet_state = "ready"
+            score_value += 1
             enemy_x[i] = random.randint(0, 936) 
             enemy_y[i] = random.randint(40, 200)
         
