@@ -1,6 +1,6 @@
 # **Space-Invaders**
 
-This is simple Space Invaders game implemented in Python using the Pygame library. In this game, the player controls a spaceship and shoots down enemy spaceships while avoiding collisions.
+This is a simple Space Invaders game implemented in Python using the Pygame library. In this game, the player controls a spaceship and shoots down enemy spaceships while avoiding collisions.
 
 ### Prerequisites
 Before running the game, make sure you have Python and the Pygame library installed on your system. You can install Pygame using the following command:
@@ -25,3 +25,20 @@ Before running the game, make sure you have Python and the Pygame library instal
 - Avoid collisions with enemy spaceships, or the game will end.
 - Your score is displayed at the top left corner of the screen.
 
+### Credits
+**Background image:** [Image Source](https://www.freepik.com/free-vector/cartoon-galaxy-background-with-planets_14121184.htm#query=cartoon%20space&position=33&from_view=keyword&track=ais)
+**Player:** [Icon Source](https://www.freepik.com/icon/ufo_997074#fromView=search&term=spaceship+icon&page=28&position=55&track=ais)
+**Enemy:** [Icon Source](https://www.freepik.com/icon/spaceship_901787#fromView=search&term=spaceship+icon&page=26&position=13&track=ais)
+**Font for the GAME OVER text:** [Font Source](https://www.dafont.com/search.php?q=pokemon)
+**Font for the SCORE text:** [Font Source](https://www.dafont.com/search.php?q=supermario)
+
+### Acknowledgements
+- This game was created as a learning project using the Pygame library.
+- Feel free to modify and improve the game as you see fit.
+
+
+### Author
+Micayle Beukes
+
+### Contributing
+If you'd like to contribute to this project, please open an issue or create a pull request.
