@@ -1,4 +1,4 @@
-# **Space-Invaders**
+# **Space Invaders**
 
 This is a simple Space Invaders game implemented in Python using the Pygame library. In this game, the player controls a spaceship and shoots down enemy spaceships while avoiding collisions.
 
@@ -11,7 +11,7 @@ Before running the game, make sure you have Python and the Pygame library instal
 2. Ensure that you have Python and Python installed.
 3. Open a terminal and navigate to the directory where the game's source code is located.
 4. Run the game using the following:
-`python space_invaders.py`
+`python game.py`
 5. Run the unit tests using the following:
 `python -m unittest discover tests`
 
@@ -26,11 +26,11 @@ Before running the game, make sure you have Python and the Pygame library instal
 - Your score is displayed at the top left corner of the screen.
 
 ### Credits
-**Background image:** [Image Source](https://www.freepik.com/free-vector/cartoon-galaxy-background-with-planets_14121184.htm#query=cartoon%20space&position=33&from_view=keyword&track=ais)
-**Player:** [Icon Source](https://www.freepik.com/icon/ufo_997074#fromView=search&term=spaceship+icon&page=28&position=55&track=ais)
-**Enemy:** [Icon Source](https://www.freepik.com/icon/spaceship_901787#fromView=search&term=spaceship+icon&page=26&position=13&track=ais)
-**Font for the GAME OVER text:** [Font Source](https://www.dafont.com/search.php?q=pokemon)
-**Font for the SCORE text:** [Font Source](https://www.dafont.com/search.php?q=supermario)
+- **Background image:** [Image Source](https://www.freepik.com/free-vector/cartoon-galaxy-background-with-planets_14121184.htm#query=cartoon%20space&position=33&from_view=keyword&track=ais)
+- **Player:** [Icon Source](https://www.freepik.com/icon/ufo_997074#fromView=search&term=spaceship+icon&page=28&position=55&track=ais)
+- **Enemy:** [Icon Source](https://www.freepik.com/icon/spaceship_901787#fromView=search&term=spaceship+icon&page=26&position=13&track=ais)
+- **Font for the GAME OVER text:** [Font Source](https://www.dafont.com/search.php?q=pokemon)
+- **Font for the SCORE text:** [Font Source](https://www.dafont.com/search.php?q=supermario)
 
 ### Acknowledgements
 - This game was created as a learning project using the Pygame library.
