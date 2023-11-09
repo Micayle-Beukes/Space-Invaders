@@ -42,7 +42,7 @@ num_of_enemies = 12
 for i in range(num_of_enemies):
     enemy_image.append(pygame.image.load('images/enemy.png'))
     enemy_x.append(random.randint(0, 1000))  # random X co-ordinate
-    enemy_y.append(random.randint(40, 200))  # random Y co-ordinate
+    enemy_y.append(40)
     enemy_x_change.append(0.3)
     enemy_y_change.append(40)
 
@@ -126,11 +126,13 @@ while running:
         player_x = 936
         
     for i in range(num_of_enemies): 
-        if enemy_y[i] > 600:
-            for j in range(num_of_enemies):
-                enemy_y[j] = 2000
+        if isCollison(enemy_x[i], enemy_y[i], player_x, player_y):
             game_over_text()
             break
+        
+        if enemy_y[i] > 600:
+            enemy_y[i] = 40  # Reset the enemy to the top
+            enemy_x[i] = random.randint(0, 936)
             
         enemy_x[i] += enemy_x_change[i]
         
